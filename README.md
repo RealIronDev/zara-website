@@ -1,1 +1,1 @@
-# zara-website
+# Not accepting pull requests
