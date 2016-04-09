@@ -1,35 +1,117 @@
 <html>
-    
-    <head>
-        <title>Zara Soccer | Home</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
+
+<head>
+    <title>Zara Soccer | Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Zara Soccer Club">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include Bootstrap Css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Include Bootstrap Min Css -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- Include Animate Min Css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Include Fontawesome Min Css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Include Magnific PopUp Css -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- bxSlider CSS file -->
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <!-- Include Style Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Include Responsive Css -->
+    <link rel="stylesheet" href="css/responsive.min.css">
+    <!-- Include Modernizer Js -->
+    <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <style>
+        body {
+            background: #cacaca
+        }
+    </style>
+    <style>
+        /* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
         
-    </head>
-    
+        .js div#preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
+        }
+    </style>
+
+</head>
+
+<div class="js">
+
     <body>
-        <header id="header" class="skel-layers-fixed">
-				<h1><a href="#">Zara</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Registration</a></li>
-						<li><a href="#">Gallery</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
-				</nav>
-			</header>
+        <div id="preloader"></div>
+
+        <header id="masthead" class="masthead navbar navbar-default navbar-fixed-top">
+            <div style="margin-bottom:0px" class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="./"><img src="" alt="Zara"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <nav id="main-menu" class="collapse navbar-collapse pull-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a class="smoothScroll" href="#home">Home</a></li>
+                        <li><a class="smoothScroll" href="#reg">Registration</a></li>
+                        <li><a class="smoothScroll" href="#gallery">Gallery</a></li>
+                        <li><a class="smoothScroll" href="#location">Our Location</a></li>
+                        <li><a class="smoothScroll" href="#contact">Contact us</a></li>
+                    </ul>
+                </nav>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <!-- /#masthead -->
+        <div style="background-color:light-gray" class="container">
+            <div style="margin-top:75px;margin-bottom:10px;background-color:white" id="home" class="jumbotron">
+                <h2 align="center"><strong>Welcome!</strong></h2>
+                <p style="color:#2EA6A6" align="center">Welcome to the offical Zara Sports Club website. What is Zara Sports Club? Zara Sports Club is a non-profit
+                    organization that is a sports club from ages five through sixteen. This whole organization is ran by
+                    an eritrean comunnity.</p>
+            </div>
+        </div>
+        <div style="background-color:light-gray" class="jumbotron">
+            <div align="center" id="location">
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                <div style='overflow:hidden;height:440px;width:700px;'>
+                    <div id='gmap_canvas' style='height:440px;width:700px;'></div>
+                    <div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div>
+                    <div><small><a href="http://freedirectorysubmissionsites.com/">link directories</a></small></div>
+                    <style>
+                        #gmap_canvas img {
+                            max-width: none!important;
+                            background: none!important
+                        }
+                    </style>
+                </div>
+                <script type='text/javascript'>
+                    function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(38.8852706,-77.04705480000001),mapTypeId: google.maps.MapTypeId.HYBRID};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(38.8852706,-77.04705480000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Primary Soccer Location</strong><br>West Potomac Park<br>Washington, DC<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                </script>
+            </div>
+        </div>
+
+
+        <!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+        <script src="js/index.js"></script>
+        <p style="background-color:#fff" align="center">Copyright © 2015 Zara Sports Club</p>
     </body>
-    
+
+</div>
+
 </html>
